@@ -26,7 +26,7 @@ npm install react-battery-level --save
 
 ```jsx
 import { useState } from "react";
-import BatteryLevel from "./BatteryLevel";
+import BatteryLevel from "react-battery-level";
 
 function App() {
   const [gauge, setGauge] = useState(75);

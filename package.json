@@ -1,6 +1,6 @@
 {
   "name": "react-battery-level",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "private": false,
   "description": "Simple customizable react battery component",
   "main": "dist/index.js",
