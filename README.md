@@ -54,7 +54,7 @@ export default App;
 | Prop                    | Type                 | Default     | Description                                            |
 | ----------------------- | -------------------- | ----------- | ------------------------------------------------------ |
 | `width`                 | `number` \| `string` | `"100%"`    | Optional. The width of the SVG battery icon.           |
-| `height`                | `number` \| `string` | `"auto"`    | Optional. The height of the SVG battery icon.          |
+| `height`                | `number` \| `string` | `"100%"`    | Optional. The height of the SVG battery icon.          |
 | `gauge`                 | `number`             | None        | Required. The charge level of the battery (0-100).     |
 | `gaugeColor`            | `string`             | `"#6EF47A"` | Optional. The color of the battery fill.               |
 | `isCharging`            | `boolean`            | `false`     | Required. Indicates if the battery is charging.        |
