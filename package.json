@@ -25,8 +25,8 @@
   },
   "license": "MIT",
   "keywords": [
-    "react",
     "battery",
+    "gauge",
     "battery svg",
     "battery indicator",
     "battery level"

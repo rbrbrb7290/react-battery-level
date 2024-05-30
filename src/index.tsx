@@ -6,9 +6,9 @@ type Props = {
   isCharging: boolean;
   isShowGaugePercentage: boolean;
   lightningBoltStyles?: {
-    fill?: string;
-    stroke?: string;
-    strokeWidth?: string | number;
+    fill: string;
+    stroke: string;
+    strokeWidth: string | number;
   };
   gaugePercentageStyles?: {
     fontSize: string | number;
