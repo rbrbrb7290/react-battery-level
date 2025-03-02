@@ -1,6 +1,6 @@
 {
   "name": "react-battery-level",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": false,
   "description": "Simple customizable react battery component",
   "main": "dist/index.js",
@@ -26,10 +26,12 @@
   "license": "MIT",
   "keywords": [
     "battery",
-    "gauge",
-    "battery svg",
     "battery indicator",
-    "battery level"
+    "battery level",
+    "react battery",
+    "react battery level",
+    "react battery gauge",
+    "react battery indicator"
   ],
   "scripts": {
     "start": "react-scripts start",
