@@ -31,7 +31,6 @@ function App() {
     <BatteryLevel
       width="250"
       gauge={75}
-      gaugeColor="#34C759"
       isCharging
       borderStyles={{
         color: '#000',
@@ -52,7 +51,7 @@ export default App;
 | `width`            | `number` \| `string` | `"150"`     | Optional. The width of the battery icon.               |
 | `height`           | `number` \| `string` | `"100%"`    | Optional. The height of the battery icon.              |
 | `gauge`            | `number`             | None        | Required. The charge level of the battery (0-100).     |
-| `gaugeColor`       | `string`             | `"#6EF47A"` | Optional. The color of the battery fill.               |
+| `gaugeColor`       | `string`             | `"#34C759"` | Optional. The color of the battery fill.               |
 | `isCharging`       | `boolean`            | `false`     | Optional. Indicates if the battery is charging.        |
 | `showPercentage`   | `boolean`            | `false`     | Optional. Shows the battery percentage inside the SVG. |
 | `borderStyles`     | `object`             | `{}`        | Optional. Styling for the border.                      |

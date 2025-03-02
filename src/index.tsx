@@ -4,7 +4,7 @@ const BatteryLevel = ({
   width = '150',
   height = '100%',
   gauge,
-  gaugeColor = '#6EF47A',
+  gaugeColor = '#34C759',
   isCharging = false,
   lightningStyles = {},
   showPercentage = false,
