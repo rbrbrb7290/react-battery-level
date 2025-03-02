@@ -2,83 +2,88 @@
 
 ## Simple customizable battery component!
 
-## Features
+## 목차
 
-- **SVG-Based**: Crisp and clean rendering at any size or resolution.
-- **Dynamic Gauge**: Visual battery level represented by a customizable SVG fill.
-- **Charging State**: Optional SVG lightning bolt icon for charging indication.
-- **Customizable Appearance**: Configure the dimensions, color, and styles of the SVG elements.
-- **Percentage Display**: Option to display the battery percentage text within the SVG.
+- [Installation](#installation)
+- [Usage](#usage)
+- [Props](#props)
+- [License](#license)
+
+### Features
 
 <div align="center">
-  <img width="300px" src="/demo/demo1.gif">
-   <img width="300px" src="/demo/demo2.gif">
-    <img width="300px" src="/demo/demo3.gif">
+  <img width="300px" src="/demo/demo.gif">
 </div>
 
-## Installation
+### Installation
 
 ```bash
-npm install react-battery-level --save
+npm i react-battery-level
 ```
 
-## Usage
+### Usage
 
 ```jsx
-import { useState } from "react";
-import BatteryLevel from "react-battery-level";
+import BatteryLevel from 'react-battery-level';
 
 function App() {
-  const [gauge, setGauge] = useState(75);
   return (
-    //Adjust only width to maintain aspect ratio.
     <BatteryLevel
-      width="10vw"
-      gauge={gauge}
-      gaugeColor={gauge <= 20 ? "#FF5713" : "#6EF47A"}
-      isCharging={true}
-      isShowGaugePercentage={false}
-      lightningBoltStyles={{
-        fill: gauge <= 20 ? "#FF5713" : "#6EF47A",
-        stroke: "white",
-        strokeWidth: 0.5,
+      width="250"
+      gauge={75}
+      gaugeColor="#34C759"
+      isCharging
+      borderStyles={{
+        color: '#000',
       }}
     />
   );
 }
+
 export default App;
 ```
 
 ## Props
 
-| Prop                    | Type                 | Default     | Description                                            |
-| ----------------------- | -------------------- | ----------- | ------------------------------------------------------ |
-| `width`                 | `number` \| `string` | `"100%"`    | Optional. The width of the SVG battery icon.           |
-| `height`                | `number` \| `string` | `"100%"`    | Optional. The height of the SVG battery icon.          |
-| `gauge`                 | `number`             | None        | Required. The charge level of the battery (0-100).     |
-| `gaugeColor`            | `string`             | `"#6EF47A"` | Optional. The color of the battery fill.               |
-| `isCharging`            | `boolean`            | `false`     | Required. Indicates if the battery is charging.        |
-| `isShowGaugePercentage` | `boolean`            | `true`      | Optional. Shows the battery percentage inside the SVG. |
-| `lightningBoltStyles`   | `object`             | `{}`        | Optional. Styling for the SVG lightning bolt.          |
-| `gaugePercentageStyles` | `object`             | `{}`        | Optional. Styling for the battery percentage text.     |
+`BatteryLevel` 컴포넌트는 다음과 같은 props를 받습니다:
 
-<br>
+| Prop               | Type                 | Default     | Description                                            |
+| ------------------ | -------------------- | ----------- | ------------------------------------------------------ |
+| `width`            | `number` \| `string` | `"150"`     | Optional. The width of the battery icon.               |
+| `height`           | `number` \| `string` | `"100%"`    | Optional. The height of the battery icon.              |
+| `gauge`            | `number`             | None        | Required. The charge level of the battery (0-100).     |
+| `gaugeColor`       | `string`             | `"#6EF47A"` | Optional. The color of the battery fill.               |
+| `isCharging`       | `boolean`            | `false`     | Optional. Indicates if the battery is charging.        |
+| `showPercentage`   | `boolean`            | `false`     | Optional. Shows the battery percentage inside the SVG. |
+| `borderStyles`     | `object`             | `{}`        | Optional. Styling for the border.                      |
+| `lightningStyles`  | `object`             | `{}`        | Optional. Styling for the lightning bolt.              |
+| `percentageStyles` | `object`             | `{}`        | Optional. Styling for the battery percentage text.     |
 
-### `lightningBoltStyles` Object
+### `borderStyles` Object
 
-| Key           | Type                 | Default   | Description                              |
-| ------------- | -------------------- | --------- | ---------------------------------------- |
-| `fill`        | `string`             | `"white"` | SVG fill color for the lightning bolt.   |
-| `stroke`      | `string`             | `"black"` | SVG stroke color for the lightning bolt. |
-| `strokeWidth` | `number` \| `string` | `0.5`     | SVG stroke width for the lightning bolt. |
+| Key           | Type     | Default   | Description                          |
+| ------------- | -------- | --------- | ------------------------------------ |
+| `color`       | `string` | `"black"` | Stroke color for the battery border. |
+| `strokeWidth` | `number` | `1`       | Stroke width for the battery border. |
+| `radius`      | `number` | `5`       | Border radius for the battery.       |
 
-### `gaugePercentageStyles` Object
+### `lightningStyles` Object
 
-| Key        | Type                 | Default   | Description                                |
-| ---------- | -------------------- | --------- | ------------------------------------------ |
-| `fontSize` | `number` \| `string` | `7`       | Font size for the battery percentage text. |
-| `color`    | `string`             | `"black"` | Color for the battery percentage text.     |
+| Key           | Type     | Default                    | Description                                  |
+| ------------- | -------- | -------------------------- | -------------------------------------------- |
+| `fill`        | `string` | `"yellow"`                 | Fill color for the lightning bolt.           |
+| `stroke`      | `string` | `none`                     | Stroke color for the lightning bolt.         |
+| `strokeWidth` | `number` | `0.5`                      | Stroke width for the lightning bolt.         |
+| `position`    | `object` | `{ x: 15, y: -1 }`         | Position of the lightning bolt.              |
+| `transform`   | `object` | `{ scale: 1, rotate: 10 }` | Transform properties for the lightning bolt. |
 
-## License
+### `percentageStyles` Object
+
+| Key        | Type     | Default   | Description                                |
+| ---------- | -------- | --------- | ------------------------------------------ |
+| `fontSize` | `number` | `8`       | Font size for the battery percentage text. |
+| `color`    | `string` | `"black"` | Color for the battery percentage text.     |
+
+### License
 
 MIT
